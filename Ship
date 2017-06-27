@@ -1,0 +1,18 @@
+public class Ship {
+
+	private String name;
+	private boolean inService;
+	private int commissionDate;
+
+	public Ship(String name, boolean inService, int commissionDate) {
+		this.name = name;
+		this.inService = inService;
+		this.commissionDate = commissionDate;
+	}
+
+	@Override
+	public String toString() {
+		return "Ship [Name=" + name + ", Active Service=" + inService + ", Commissioned=" + commissionDate + "]";
+	}
+
+}
