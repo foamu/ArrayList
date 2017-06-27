@@ -1,0 +1,53 @@
+import java.util.ArrayList;
+
+public class Example {
+
+	public static void main(String[] args) {
+
+		// ===========================
+
+		ArrayList<String> stringList = new ArrayList<String>();
+
+		stringList.add("Edwin");
+		stringList.add("Nane");
+		stringList.add("Kevin");
+		stringList.add("Matt");
+		stringList.add("David");
+		stringList.add("Eugene");
+
+		// Retrieve a value from an index point
+		System.out.println(stringList.get(4));
+
+		for (String value : stringList) {
+			System.out.println(value);
+		}
+
+		// Removing an item from the end of the list
+		// -2 would be the 2nd last item of the list & so on
+		stringList.remove(stringList.size() - 1);
+		System.out.println(stringList);
+
+		// VERY slow; use with caution
+		stringList.remove("Matt");
+		stringList.remove("Edwin");
+		stringList.remove("Nane");
+		System.out.println(stringList);
+
+		// ============================
+		System.out.println();
+
+		ArrayList<Ship> ships = new ArrayList<Ship>();
+
+		ships.add(new Ship("USS Constitution", true, 1776));
+		ships.add(new Ship("USS Ticonderoga", true, 2053));
+		ships.add(new Ship("USS Locke", false, 2026));
+		ships.add(new Ship("USS Valley Forge", true, 2030));
+		ships.add(new Ship("USS Mackenzie", true, 2044));
+
+		for (Ship value : ships) {
+			System.out.println(value);
+		}
+		
+		System.out.println(ships.isEmpty());
+	}
+}
